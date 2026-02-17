@@ -1,0 +1,3 @@
+com\example\webbackend\controller\BookController.class
+com\example\webbackend\entity\Book.class
+com\example\webbackend\WebbackendApplication.class
