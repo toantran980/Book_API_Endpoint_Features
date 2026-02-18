@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c90df534-f3ee-45f0-8296-e2a437961941" name="Changes" comment="initial push" />
+    <list default="true" id="c90df534-f3ee-45f0-8296-e2a437961941" name="Changes" comment="initial push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/src/main/java/com/example/webbackend/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/webbackend/src/main/java/com/example/webbackend/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/WebbackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/WebbackendApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/controller/BookController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +27,14 @@
               </list>
             </value>
           </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
         </map>
       </branch-storage>
     </excluded-from-favorite>
@@ -31,21 +45,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "toantran980"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;toantran980&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="c6856cf4-e446-47fd-b77d-866bb38d9825" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/toantran980/Book_API_Endpoint_Features.git",
-    "accountId": "c6856cf4-e446-47fd-b77d-866bb38d9825"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/toantran980/Book_API_Endpoint_Features.git&quot;,
+    &quot;accountId&quot;: &quot;c6856cf4-e446-47fd-b77d-866bb38d9825&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -74,10 +88,12 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.WebbackendApplication.executor": "Run",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/toant/Desktop/CPSC449-Web-Back-End-Engineer/IC/Week4Session1Session2",
@@ -91,6 +107,15 @@
   }
 }]]></component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <configuration name="WebbackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="webbackend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.webbackend.WebbackendApplication" />
@@ -123,6 +148,10 @@
       <workItem from="1771290831052" duration="3465000" />
       <workItem from="1771300067029" duration="163000" />
       <workItem from="1771300238639" duration="1194000" />
+      <workItem from="1771303274642" duration="708000" />
+      <workItem from="1771357349543" duration="2527000" />
+      <workItem from="1771374953005" duration="20000" />
+      <workItem from="1771376307756" duration="1774000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />

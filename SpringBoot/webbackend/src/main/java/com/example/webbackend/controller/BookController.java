@@ -157,10 +157,10 @@ public class BookController {
         @DeleteMapping("/books/{id}")
         public boolean deleteBook(@PathVariable Long id) {
             return books.stream()
-                    .filter(book -> book.getId().equals(id))    // Predicate lambda
-                    .findFirst()                           // Returns Optional<Book>
-                    .map(book -> books.remove(book))       // Function lambda (returns boolean)
-                    .orElse(false);                        // Default if not found
+                    .filter(book -> book.getId().equals(id))
+                    .findFirst()
+                    .map(book -> books.remove(book))
+                    .orElse(false);
         }
          */
         return books.removeIf(book -> book.getId().equals(id));
@@ -169,12 +169,14 @@ public class BookController {
     // get book by pagination
     @GetMapping("/books/page")
     public List<Book> getBooksByPage(
-            @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "5") int size
+            @RequestParam (defaultValue = "1") int page,
+            @RequestParam (defaultValue = "5") int size
     ) {
         int startPage = (page - 1); // start at page 1
         return books.stream().skip((long) startPage * size)
                 .limit(size)
                 .collect(Collectors.toList());
     }
+
+    //
 }
