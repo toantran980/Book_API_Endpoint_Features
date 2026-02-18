@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c90df534-f3ee-45f0-8296-e2a437961941" name="Changes" comment="initial push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/src/main/java/com/example/webbackend/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/webbackend/src/main/java/com/example/webbackend/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/WebbackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/WebbackendApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/webbackend/target/classes/com/example/webbackend/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/webbackend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/webbackend/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +103,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\toant\Desktop\CPSC449-Web-Back-End-Engineer\IC\Week4Session1Session2\SpringBoot" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -151,7 +153,7 @@
       <workItem from="1771303274642" duration="708000" />
       <workItem from="1771357349543" duration="2527000" />
       <workItem from="1771374953005" duration="20000" />
-      <workItem from="1771376307756" duration="1774000" />
+      <workItem from="1771376307756" duration="2214000" />
     </task>
     <task id="LOCAL-00001" summary="initial push">
       <option name="closed" value="true" />
