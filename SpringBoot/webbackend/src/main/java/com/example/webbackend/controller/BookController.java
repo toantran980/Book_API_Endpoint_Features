@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.Optional;
 
 
 @RestController
@@ -143,9 +142,6 @@ public class BookController {
                 .filter(match_book -> match_book.getId().equals(id))
                 .findFirst()
                 .map(match_book -> {
-                    /*Optional.ofNullable(book.getTitle()).ifPresent(match_book::setTitle);
-                    Optional.ofNullable(book.getAuthor()).ifPresent(match_book::setAuthor);
-                    Optional.ofNullable(book.getPrice()).ifPresent(match_book::setPrice);*/
                     if (book.getAuthor() != null) {
                         match_book.setAuthor(book.getAuthor());
                     }
