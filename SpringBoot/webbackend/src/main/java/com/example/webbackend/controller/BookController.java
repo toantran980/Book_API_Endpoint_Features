@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Optional;
 
+
 @RestController
 @RequestMapping("/api")
 public class BookController {
@@ -142,27 +143,33 @@ public class BookController {
                 .filter(match_book -> match_book.getId().equals(id))
                 .findFirst()
                 .map(match_book -> {
-                    Optional.ofNullable(book.getTitle()).ifPresent(match_book::setTitle);
+                    /*Optional.ofNullable(book.getTitle()).ifPresent(match_book::setTitle);
                     Optional.ofNullable(book.getAuthor()).ifPresent(match_book::setAuthor);
-                    Optional.ofNullable(book.getPrice()).ifPresent(match_book::setPrice);
+                    Optional.ofNullable(book.getPrice()).ifPresent(match_book::setPrice);*/
+                    if (book.getAuthor() != null) {
+                        match_book.setAuthor(book.getAuthor());
+                    }
+                    if (book.getTitle() != null) {
+                        match_book.setTitle(book.getTitle());
+                    }
+                    if (book.getPrice() != null) {
+                        match_book.setPrice(book.getPrice());
+                    }
                     return match_book;
-                })
-                .orElse(null);
+                }).orElse(null);
     }
 
     // delete endpoint (remove book)
     @DeleteMapping("/books/{id}")
     public boolean deleteBook(@PathVariable Long id) {
         /*
-        @DeleteMapping("/books/{id}")
-        public boolean deleteBook(@PathVariable Long id) {
             return books.stream()
                     .filter(book -> book.getId().equals(id))
                     .findFirst()
                     .map(book -> books.remove(book))
                     .orElse(false);
-        }
-         */
+        }*/
+
         return books.removeIf(book -> book.getId().equals(id));
     }
 
@@ -178,5 +185,40 @@ public class BookController {
                 .collect(Collectors.toList());
     }
 
-    //
+    // get endpoint with filtering, sorting, and pagination combined in the valid order
+    @GetMapping("/books/search-by")
+    public List<Book> getBooksByFilterPage(
+            @RequestParam(required = false, defaultValue = "") String title,
+            @RequestParam(required = false, defaultValue = "") String author,
+            @RequestParam(required = false, defaultValue = "title") String sortBy,
+            @RequestParam(required = false, defaultValue = "asc") String order,
+            @RequestParam(required = false, defaultValue = "1")   int page,
+            @RequestParam(required = false, defaultValue = "5") int size
+    ) {
+        Comparator<Book> comparator;
+        switch(sortBy.toLowerCase()) {
+            case "author":
+                comparator = Comparator.comparing(Book::getAuthor);
+                break;
+                case "title":
+                    comparator = Comparator.comparing(Book::getTitle);
+            default:
+                comparator = Comparator.comparing(Book::getTitle);
+                break;
+        }
+
+        if("desc".equalsIgnoreCase(order)) {
+            comparator = comparator.reversed();
+        }
+
+        int startPage = (page - 1);
+
+        return books.stream()
+                    .filter(book -> title == null || book.getTitle().toLowerCase().contains(title.toLowerCase()))
+                    .filter(book -> author == null || book.getAuthor().toLowerCase().contains(author.toLowerCase()))
+                    .sorted(comparator)
+                    .skip((long) startPage * size)
+                    .limit(size)
+                    .collect(Collectors.toList());
+    }
 }
