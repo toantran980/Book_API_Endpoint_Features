@@ -162,14 +162,6 @@ public class BookController {
     // delete endpoint (remove book)
     @DeleteMapping("/books/{id}")
     public boolean deleteBook(@PathVariable Long id) {
-        /*
-            return books.stream()
-                    .filter(book -> book.getId().equals(id))
-                    .findFirst()
-                    .map(book -> books.remove(book))
-                    .orElse(false);
-        }*/
-
         return books.removeIf(book -> book.getId().equals(id));
     }
 
