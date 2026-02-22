@@ -179,7 +179,7 @@ public class BookController {
             @RequestParam (defaultValue = "1") int page,
             @RequestParam (defaultValue = "5") int size
     ) {
-        int startPage = (page - 1); // start at page 1
+        int startPage = page - 1; // start at page 1
         return books.stream().skip((long) startPage * size)
                 .limit(size)
                 .collect(Collectors.toList());
@@ -211,7 +211,7 @@ public class BookController {
             comparator = comparator.reversed();
         }
 
-        int startPage = (page - 1);
+        int startPage = page - 1;
 
         return books.stream()
                     .filter(book -> title == null || book.getTitle().toLowerCase().contains(title.toLowerCase()))
