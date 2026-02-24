@@ -36,9 +36,7 @@ public class Book {
         this.author = author;
     }
 
-    public Double getPrice() {
-        return price;
-    }
+    public Double getPrice() { return price;}
 
     public void setPrice(Double price) {
         this.price = price;
